@@ -1,0 +1,7 @@
+student name...subject...Degree
+1 Maher...English...45
+2 Madeh...Arabic...95
+3 fayrouz...Math...75
+4 basmala...histroy...85
+5 Aml...English...100 :)
+6 Nadine...Math...61
