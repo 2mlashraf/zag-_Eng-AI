@@ -1,116 +1,131 @@
 # Python Basics
 
-هذا الملف يحتوي على مفاهيم أساسية في لغة بايثون، تشمل التعامل مع السلاسل، الدوال، الشروط، والبرمجة الكائنية.
+This document contains fundamental concepts in Python, including string manipulation, functions, conditions, and object-oriented programming.
 
--- 1. التعامل مع السلاسل
+## 1. String Manipulation
 
-1.1 الوصول إلى العناصر (Indexing)
-يمكن الوصول إلى عنصر واحد في سلسلة باستخدام الفهارس:
+### 1.1 Indexing
+You can access a single character in a string using indexing:
 ```python
 mystring = "hello python"
-print(mystring[0])   # الناتج: h
-print(mystring[-1])  # الناتج: n
-1.2 تقسيم السلاسل (Slicing)
-يمكن الوصول إلى عدة عناصر باستخدام التنسيق [start:end] (النهاية غير مشمولة):
+print(mystring[0])   # Output: h
+print(mystring[-1])  # Output: n
+```
+1.2 Slicing
+You can access multiple characters using the [start:end] format (the end is not included)
+```python
+print(mystring[:10])      # Output: hello pyt
+print(mystring[::2])      # Output: hlopto
+```
+2. String Methods
+len(): Returns the length of the string.
+strip(): Removes extra spaces from both ends.
+split(): Splits the string into a list based on a delimiter.
+upper() / lower(): Converts the string to uppercase or lowercase.
+replace(): Replaces a part of the string with another.
+find(): Searches for a substring and returns its index.
+join(): Joins list elements into a string using a specified delimiter.
+format() / f-strings: Used for formatting strings.
 
-python
-Copy
-print(mystring[:10])      # الناتج: hello pyt
-print(mystring[::2])      # الناتج: hlopto
+3. Comments
+Single-line comments start with #.
+Triple quotes can be used for multi-line comments, but they are not comments unless assigned to a variable.
 
-
--- 2. طرق السلاسل (String Methods)
-len(): تُرجع طول السلسلة.
-strip(): تزيل المسافات الزائدة من الجانبين.
-split(): تقسيم السلسلة إلى قائمة بناءً على فاصل.
-upper() / lower(): تحويل السلسلة إلى حروف كبيرة أو صغيرة.
-replace(): استبدال جزء من السلسلة بآخر.
-find(): البحث عن جزء من السلسلة وإرجاع موقعه.
-join(): دمج عناصر القائمة إلى سلسلة باستخدام فاصل محدد.
-format() / f-strings: تستخدم لتنسيق السلاسل.
-
-
--- 3. التعليقات (Comments)
-التعليقات ذات السطر الواحد تبدأ بـ #.
-يمكن استخدام السلاسل الثلاثية كتعليقات متعددة الأسطر، لكنها ليست تعليقات ما لم يتم تعيينها إلى متغير.
-
-
--- 4. الدوال (Functions)
-4.1 تعريف الدوال
-تُستخدم الكلمة المفتاحية def لتعريف دالة:
+4. Functions
+4.1 Defining Functions
+Use the def keyword to define a function
+```python
 def greet(name):
     print(f"Hello, {name}!")
-4.2 استدعاء الدوال
-يمكن استدعاء الدالة باستخدام اسمها وتمرير المعاملات:
-
-python
-Copy
-greet('Alice')  # الناتج: Hello, Alice!
-4.3 المعاملات (Parameters)
-يمكن أن تأخذ الدوال معاملات متعددة:
-    def add(x, y):
+```
+4.2 Calling Functions
+You can call a function using its name and passing arguments
+```python
+greet('Alice')  # Output: Hello, Alice!
+```
+4.3 Parameters
+Functions can take multiple parameters
+```python
+def add(x, y):
     return x + y
-4.4 القيم المعادة (Return Values)
-تُستخدم الكلمة المفتاحية return لإرجاع قيمة:
-    def multiply(x, y):
+```
+4.4 Return Values
+Use the return keyword to return a value
+```python
+def multiply(x, y):
     return x * y
-4.5 الدوال المتداخلة (Nested Functions)
-يمكن تعريف دالة داخل دالة أخرى:
-    def outer_function():
+```
+4.5 Nested Functions
+You can define a function inside another function
+```python
+def outer_function():
     def inner_function():
         return "Hello from inner!"
     return inner_function()
-4.6 الدوال التكرارية (Recursive Functions)
-يمكن أن تستدعي الدالة نفسها:
-    def factorial(n):
+```
+4.6 Recursive Functions
+A function can call itself
+```python
+def factorial(n):
     if n == 0:
         return 1
     else:
         return n * factorial(n - 1)
-
-
--- 5. الشروط (Conditions)
-5.1 جمل if
-تنفذ كتلة من التعليمات إذا كانت الشرط صحيحًا:
-    x = 10
+```
+5. Conditions
+5.1 If Statements
+A block of code is executed if the condition is true
+```python
+x = 10
 if x > 5:
-    print("x is greater than 5")  # الناتج: x is greater than 5
-5.2 جمل else
-يمكن استخدام جملة else لتنفيذ كتلة إذا كان الشرط خاطئًا.
+    print("x is greater than 5")  # Output: x is greater than 5
+```
+5.2 Else Statements
+An else statement can be used to execute a block if the condition is false.
 
-5.3 جمل elif
-تتيح لك التحقق من شروط متعددة:
-    if condition1:
-    # كود إذا كان condition1 صحيحًا
+5.3 Elif Statements
+You can check multiple conditions
+```python
+if condition1:
+    # Code if condition1 is true
 elif condition2:
-    # كود إذا كان condition2 صحيحًا
+    # Code if condition2 is true
 else:
-    # كود إذا كانت كلا الشرطين خاطئين
-5.4 الشروط المتداخلة
-يمكن أن تحتوي جمل if على جمل أخرى بداخلها.
+    # Code if both conditions are false
+```
+5.4 Nested Conditions
+if statements can contain other if statements inside them.
 
-5.5 عوامل المنطق
-يمكن دمج الشروط باستخدام عوامل:
+5.5 Logical Operators
+You can combine conditions using operators:
 
-and: ترجع صحيحًا إذا كانت كل الشروط صحيحة.
-or: ترجع صحيحًا إذا كانت واحدة على الأقل صحيحة.
-not: تعكس نتيجة الشرط.
+and: Returns true if all conditions are true.
+or: Returns true if at least one condition is true.
+not: Negates the condition's result.
 
+6. Object-Oriented Programming (OOP)
+6.1 Objects
+An object is an instance of a class that contains data (attributes) and behaviors (methods).
 
--- 6. البرمجة الكائنية (OOP)
-6.1 الكائنات (Objects)
-الكائن هو نسخة من فئة تحتوي على بيانات (خصائص) وسلوكيات (طرق).
-
-6.2 الفئات (Classes)
-الفئة هي مخطط لإنشاء كائنات، تتضمن خصائص وطرق.
+6.2 Classes
+A class is a blueprint for creating objects, containing attributes and methods
+```python
 class Student:
     def __init__(self, name):
         self.name = name
+```
+6.3 Attributes
+Attributes are variables associated with an object.
 
-6.3 الخصائص (Attributes)
-الخصائص هي متغيرات مرتبطة بكائن.
+6.4 Methods
+Methods are functions defined within a class that operate on the object's data
 
-6.4 الطرق (Methods)
-الطرق هي دوال معرفة داخل الفئة تعمل على بيانات الكائن.
+
+
+
+
+
+
+
 
 
