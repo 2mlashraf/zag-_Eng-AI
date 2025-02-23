@@ -120,6 +120,55 @@ Attributes are variables associated with an object.
 6.4 Methods
 Methods are functions defined within a class that operate on the object's data
 
+## NumPy Overview
+NumPy (Numerical Python) is a fundamental library for scientific computing in Python.It provides support for large, multi-dimensional arrays and matrices, along with a collection of mathematical functions to operate on these arrays
+
+- N-dimensional arrays: NumPy's powerful N-dimensional array object, ndarray, allows for efficient storage and manipulation of large datasets.
+- Broadcasting: NumPy supports broadcasting, which enables arithmetic operations on arrays of different shapes without the need for explicit replication.
+- Mathematical Functions: It includes a variety of mathematical functions, such as trigonometric,statistical, and algebraic functions, which can be applied element-wise to arrays.
+- Linear Algebra: NumPy provides functions for linear algebra operations, such as dot products,matrix inversions, and eigenvalue problems
+- Random Number Generation: The library includes functions to generate random numbers, which can be useful for simulations and statistical modeling.
+- Integration with Other Libraries: NumPy serves as the foundation for many other scientific libraries,such as SciPy, Pandas, and Matplotlib
+
+  **Creating Arrays**
+  ```python
+  import numpy as np
+   #1D array
+   arr1 = np.array([1, 2, 3, 4, 5])
+
+   #2D array (matrix)
+   arr2 = np.array([[1, 2, 3], [4, 5, 6]])
+
+   #Create an array of zeros
+   zeros = np.zeros((2, 3))
+
+   #Create an array of ones
+   ones = np.ones((3, 2))
+  ```
+**Array Operations**
+```python
+# Element-wise addition
+result = arr1 + 5
+
+# Broadcasting
+arr3 = np.array([[1], [2], [3]])
+arr4 = np.array([4, 5, 6])
+result = arr3 + arr4
+
+# Matrix multiplication
+matrix_product = np.dot(arr2, arr2.T)  # arr2.T is the transpose of arr2
+```
+**Statistical Functions**
+```python
+mean = np.mean(arr1)           # Mean of the array
+std_dev = np.std(arr1)         # Standard deviation
+max_value = np.max(arr1)       # Maximum value
+min_value = np.min(arr1)       # Minimum value
+```
+
+  
+
+
 
 
 
