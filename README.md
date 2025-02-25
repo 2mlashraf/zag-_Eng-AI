@@ -165,6 +165,101 @@ std_dev = np.std(arr1)         # Standard deviation
 max_value = np.max(arr1)       # Maximum value
 min_value = np.min(arr1)       # Minimum value
 ```
+## Pandas Library 
+Pandas is an open-source library for the Python programming language used for data analysis and manipulation. It provides powerful and flexible data structures that make it easy to work with data, making it one of the essential tools in data science.
+
+- Flexible Data Structures: Pandas offers two primary structures:
+    -DataFrame: A two-dimensional data structure used to store data in tabular format.
+    -Series: A one-dimensional data structure used to store a sequence of values.
+
+- Handling Missing Data: The library makes it easy to handle and replace missing data.
+- Data Import and Export: Pandas supports importing data from various sources such as CSV, Excel, and databases.
+- Data Analysis: It contains powerful tools for data analysis, including grouping and filtering operations.
+
+**Installation**
+```python
+pip install pandas
+```
+**Creating a DataFrame**
+```python
+data = {
+    'Name': ['Ahmad', 'Fatima', 'Ali'],
+    'Age': [25, 30, 22]
+}
+df = pd.DataFrame(data)
+```
+**Displaying Data**
+```python
+print(df)
+```
+
+### Useful Methods
+- head(): Display the first n rows of the DataFrame.
+```python
+df.head(5)
+```
+- tail(): Display the last n rows of the DataFrame.
+```python
+df.tail(5)
+```
+- describe(): Get a statistical summary of the data.
+```python
+df.describe()
+```
+- info(): Display information about the DataFrame, including data types and non-null counts.
+```python
+df.info()
+```
+- dropna(): Remove rows with missing values.
+```python
+df.dropna()
+```
+- fillna(): Replace missing values with a specified value.
+```python
+df.fillna(0)
+```
+- to_csv(): Export the DataFrame to a CSV file.
+```python
+df.to_csv('output.csv', index=False)
+```
+- loc[]: Access a group of rows and columns by labels or a boolean array.
+```python
+df.loc[df['Age'] > 25]
+```
+- iloc[]: Access a group of rows and columns by integer positions.
+```python
+df.iloc[0:2, 1]  # Get the first two rows of the second column
+```
+- concat(): Concatenate two or more DataFrames along a particular axis.
+```python
+pd.concat([df1, df2], axis=0)
+```
+- astype(): Cast a pandas object to a specified dtype.
+```python
+df['Age'] = df['Age'].astype(float)
+```
+- value_counts(): Return a Series containing counts of unique values.
+```python
+df['Age'].value_counts()
+```
+- drop(): Drop specified labels from rows or columns.
+```python
+df.drop(columns='Age', inplace=True)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   
 
