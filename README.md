@@ -246,6 +246,83 @@ df['Age'].value_counts()
 ```python
 df.drop(columns='Age', inplace=True)
 ```
+##  Matplotlib 
+
+###  DEF
+**Matplotlib** is a powerful Python library used for creating static, animated, and interactive visualizations. It is widely used for data analysis and scientific plotting.
+
+---
+
+###  Installation
+```sh
+pip install matplotlib
+```
+
+---
+
+### 📈 Basic Plotting
+```python
+import matplotlib.pyplot as plt
+
+# Sample data
+x = [1, 2, 3, 4, 5]
+y = [10, 20, 25, 30, 40]
+
+# Create a simple line plot
+plt.plot(x, y, marker='o', linestyle='-', color='b', label='Line Plot')
+plt.xlabel('X-Axis')
+plt.ylabel('Y-Axis')
+plt.title('Basic Line Plot')
+plt.legend()
+plt.grid(True)
+plt.show()
+```
+
+---
+
+### 📊 Common Plot Types
+ - Line Plot
+```python
+plt.plot(x, y, color='r', linestyle='--', marker='s')
+```
+ - Bar Chart
+```python
+plt.bar(x, y, color='g')
+```
+ - Pie Chart
+```python
+labels = ['A', 'B', 'C', 'D']
+sizes = [20, 30, 25, 25]
+plt.pie(sizes, labels=labels, autopct='%1.1f%%', colors=['r', 'g', 'b', 'y'])
+```
+
+---
+
+##  Customization
+### Setting Figure Size
+```python
+plt.figure(figsize=(8, 5))
+```
+
+### Changing Line Width
+```python
+plt.plot(x, y, linewidth=2.5)
+```
+
+---
+
+##  Subplots
+```python
+fig, ax = plt.subplots(1, 2, figsize=(10, 4))
+ax[0].plot(x, y, color='b')
+ax[1].bar(x, y, color='r')
+```
+
+---
+
+## 🔗 Resources
+- 📘 Official Documentation: [Matplotlib.org](https://matplotlib.org/)
+
 
 # Statistical Summary
 
