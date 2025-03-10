@@ -247,6 +247,59 @@ df['Age'].value_counts()
 df.drop(columns='Age', inplace=True)
 ```
 
+# Statistical Summary
+
+## 📊 Measures of Dispersion 
+
+### 🔹 Range 
+**Formula:**
+![Range](https://latex.codecogs.com/png.latex?%5Ctext%7BRange%7D%20%3D%20X_%7Bmax%7D%20-%20X_%7Bmin%7D)  
+
+**Definition:** The difference between the maximum and minimum values in the dataset.  
+
+
+---
+
+### 🔹 Variance (𝜎²) 
+**Formula:**
+![Variance](https://latex.codecogs.com/png.latex?%5Csigma%5E2%20%3D%20%5Cfrac%7B%5Csum%20(X_i%20-%20%5Cmu)%5E2%7D%7BN%7D)  
+
+**Definition:** The average of the squared differences from the mean. It measures how spread out the values are.  
+
+
+---
+
+### 🔹 Standard Deviation (𝜎) 
+**Formula:**
+![Standard Deviation](https://latex.codecogs.com/png.latex?%5Csigma%20%3D%20%5Csqrt%7B%5Csigma%5E2%7D)  
+
+**Definition:** The square root of the variance. It represents the average distance of each data point from the mean.  
+
+
+---
+
+### 🔹 Sample Variance (𝑠²) 
+**Formula:**
+![Sample Variance](https://latex.codecogs.com/png.latex?s%5E2%20%3D%20%5Cfrac%7B%5Csum%20(X_i%20-%20%5Cbar%7BX%7D)%5E2%7D%7Bn%20-%201%7D)  
+
+**Definition:** The variance calculated for a sample instead of a whole population. It uses \(n-1\) instead of \(n\) to avoid bias.  
+
+---
+
+### 🔹 Coefficient of Variation (CV) 
+**Formula:**
+![CV](https://latex.codecogs.com/png.latex?CV%20%3D%20%5Cleft(%5Cfrac%7B%5Csigma%7D%7B%5Cmu%7D%20%5Cright)%20%5Ctimes%20100)  
+
+**Definition:** A relative measure of dispersion that expresses the standard deviation as a percentage of the mean.  
+
+
+
+
+
+
+
+
+
 
 
 
