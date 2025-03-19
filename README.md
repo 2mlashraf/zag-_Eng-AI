@@ -323,6 +323,61 @@ ax[1].bar(x, y, color='r')
 ## 🔗 Resources
 - 📘 Official Documentation: [Matplotlib.org](https://matplotlib.org/)
 
+##  Seaborn 
+
+**Seaborn** is a powerful Python visualization library built on top of **Matplotlib** and integrated with **Pandas**. It provides beautiful and insightful statistical plots with minimal code.
+
+###  Features
+- Simplifies statistical data visualization.
+- Provides aesthetically pleasing and consistent themes.
+- Works seamlessly with Pandas DataFrames.
+- Supports statistical analysis like regression and correlation.
+
+### Installation
+```bash
+pip install seaborn
+```
+
+### Commonly Used Plots
+
+| Plot Type | Description | Code Example |
+|-----------|-------------|-------------|
+| **Histogram** | Displays data distribution | `sns.histplot(data=df, x="column")` |
+| **Box Plot** | Shows summary statistics & outliers | `sns.boxplot(x="category", y="values", data=df)` |
+| **Scatter Plot** | Displays relationships between variables | `sns.scatterplot(x="col1", y="col2", data=df)` |
+| **Line Plot** | Shows trends over time | `sns.lineplot(x="time", y="value", data=df)` |
+| **Bar Plot** | Compares categorical data | `sns.barplot(x="category", y="values", data=df)` |
+| **Heatmap** | Displays correlation between variables | `sns.heatmap(df.corr(), annot=True, cmap="coolwarm")` |
+
+### Styling & Themes
+```python
+import seaborn as sns
+sns.set_theme(style="darkgrid")  # Apply a stylish theme
+```
+
+### Quick Example
+```python
+import seaborn as sns
+import matplotlib.pyplot as plt
+import pandas as pd
+
+# Load sample dataset
+df = sns.load_dataset("tips")
+
+# Create a Box Plot
+sns.boxplot(x="day", y="total_bill", data=df)
+
+# Show the plot
+plt.show()
+```
+
+###  Useful Resources
+- [📚 Official Documentation](https://seaborn.pydata.org/)
+- [📌 Quickstart Guide](https://seaborn.pydata.org/tutorial.html)
+
+
+
+
 
 # Statistical Summary
 
