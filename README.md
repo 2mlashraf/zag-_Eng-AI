@@ -1,3 +1,5 @@
+# AI LEVEL 0 ......
+
 # Python Basics
 
 This document contains fundamental concepts in Python, including string manipulation, functions, conditions, and object-oriented programming.
